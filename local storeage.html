@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LocalStorage and SessionStorage Example</title>
+</head>
+<body>
+
+    <h2>localStorage Example</h2>
+    <button onclick="saveLocal()">Save to localStorage</button>
+    <button onclick="getLocal()">Get from localStorage</button>
+
+    <h2>sessionStorage Example</h2>
+    <button onclick="saveSession()">Save to sessionStorage</button>
+    <button onclick="getSession()">Get from sessionStorage</button>
+
+    <script>
+        // Save value in localStorage
+        function saveLocal() {
+            localStorage.setItem("name", "Rithi");
+            alert("Value saved in localStorage!");
+        }
+
+        // Retrieve value from localStorage
+        function getLocal() {
+            let value = localStorage.getItem("name");
+            alert("Value from localStorage: " + value);
+        }
+
+        // Save value in sessionStorage
+        function saveSession() {
+            sessionStorage.setItem("course", "Web Development");
+            alert("Value saved in sessionStorage!");
+        }
+
+        // Retrieve value from sessionStorage
+        function getSession() {
+            let value = sessionStorage.getItem("course");
+            alert("Value from sessionStorage: " + value);
+        }
+    </script>
+
+</body>
+</html>
